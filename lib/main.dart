@@ -15,26 +15,87 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              width: 100.0,
-              color: Colors.red,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(width: 100, height: 100, color: Colors.yellow),
-                Container(width: 100, height: 100, color: Colors.green),
-              ],
-            ),
-            Container(
-              width: 100.0,
-              color: Colors.blue,
-            ),
-          ],
-        )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                // backgroundColor: Colors.red,
+                backgroundImage: AssetImage("images/denize_prof_pic.png"),
+              ),
+              Text(
+                'Denize Ignacio',
+                style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'Mobile Developer',
+                style: TextStyle(
+                    fontFamily: 'Source_Sans_Pro',
+                    fontSize: 24.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      "Phone number",
+                      style: TextStyle(
+                          fontFamily: 'Source_Sans_Pro',
+                          fontSize: 24.0,
+                          color: Colors.teal,
+                          fontWeight: FontWeight.normal),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      "denizepatricignacio@gmail.com",
+                      style: TextStyle(
+                          fontFamily: 'Source_Sans_Pro',
+                          fontSize: 20.0,
+                          color: Colors.teal,
+                          fontWeight: FontWeight.normal),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
